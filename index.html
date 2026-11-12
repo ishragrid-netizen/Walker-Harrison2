@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walker Harrison | Live Guitarist in China Grove, NC</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Playfair Display for sophisticated musical aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        stone: {
+                            950: '#0c0a09',
+                        },
+                        amber: {
+                            450: '#f59e0b',
+                            550: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-950 text-stone-100 font-sans antialiased selection:bg-amber-500 selection:text-stone-950 overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-stone-950/85 backdrop-blur-md border-b border-stone-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-stone-950 transition-all duration-300">
+                        <i class="fa-solid fa-guitar text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl font-bold tracking-wide text-white block leading-none">Walker Harrison</span>
+                        <span class="text-[11px] uppercase tracking-widest text-amber-400 font-medium">Live Guitarist • NC 28023</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-7">
+                    <button onclick="navigateTo('home')" class="nav-link text-sm font-medium text-amber-400 transition-colors" data-page="home">Home</button>
+                    <button onclick="navigateTo('about')" class="nav-link text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors" data-page="about">About</button>
+                    <a href="#occasions" onclick="navigateTo('home')" class="text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors">Occasions</a>
+                    <a href="#pricing" onclick="navigateTo('home')" class="text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors">Rates</a>
+                    <button onclick="navigateTo('contact')" class="nav-link text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors" data-page="contact">Contact</button>
+                </nav>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:+19109753185" class="text-sm font-medium text-stone-300 hover:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-amber-400 text-xs"></i>
+                        +1 910-975-3185
+                    </a>
+                    <button onclick="navigateTo('contact')" class="px-5 py-2.5 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold text-sm transition-all shadow-lg shadow-amber-500/20">
+                        Book Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-3 rounded-xl text-stone-300 hover:text-white hover:bg-stone-800/70 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-900 border-b border-stone-800 px-4 pt-2 pb-6 space-y-2">
+            <button onclick="navigateTo('home')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Home</button>
+            <button onclick="navigateTo('about')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">About Walker</button>
+            <a href="#occasions" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Occasions & Repertoire</a>
+            <a href="#pricing" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Rates ($200/hr)</a>
+            <button onclick="navigateTo('contact')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Contact & Location</button>
+            <div class="pt-3 border-t border-stone-800 flex flex-col gap-3">
+                <a href="tel:+19109753185" class="w-full py-3 rounded-xl bg-stone-800 text-center text-stone-200 font-medium flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-amber-400"></i> Call +1 910-975-3185
+                </a>
+                <button onclick="navigateTo('contact')" class="w-full py-3 rounded-xl bg-amber-500 text-stone-950 text-center font-bold shadow-lg">
+                    Check Availability
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN HOME VIEW -->
+    <main id="page-home" class="page-view">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden">
+        <!-- Ambient Warm Glow Background -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-amber-600/15 blur-[130px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-medium mb-6">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        Exclusively Performing in China Grove, NC 28023
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Unforgettable Live Guitar Music for Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">Special Occasion</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        Hi, I'm <strong class="text-white font-semibold">Walker Harrison</strong>. From intimate acoustic ceremonies to lively private gatherings and local venues, I bring soulful, professional guitar performances straight to your event in the 28023 area.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base transition-all shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2">
+                            <span>Book a Performance</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="tel:+19109753185" class="w-full sm:w-auto px-8 py-4 rounded-full bg-stone-900 hover:bg-stone-800 border border-stone-700 text-white font-semibold text-base transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span>+1 910-975-3185</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Key Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-xl sm:text-2xl font-bold text-white">$200<span class="text-sm font-normal text-stone-400">/hr</span></p>
+                            <p class="text-xs text-stone-400 mt-0.5">Starting Rate</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-bold text-amber-400">28023</p>
+                            <p class="text-xs text-stone-400 mt-0.5">China Grove Only</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-bold text-white">100%</p>
+                            <p class="text-xs text-stone-400 mt-0.5">Pro Sound Gear</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Card Column -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden bg-stone-900 border border-stone-800 shadow-2xl group">
+                        <!-- High-res Guitar Image with Fallback -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x950/1c1917/f59e0b?text=Walker+Harrison+Live+Guitar';"
+                            alt="Walker Harrison Acoustic & Electric Guitar Performance" 
+                            class="w-full h-[420px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
+                        >
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
+                        
+                        <!-- Floating Info Badge inside Card -->
+                        <div class="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-stone-900/90 backdrop-blur-md border border-stone-700/70">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs uppercase tracking-wider text-amber-400 font-semibold">Local Musician</p>
+                                    <h2 class="text-lg font-bold text-white">Walker Harrison</h2>
+                                    <p class="text-xs text-stone-400 mt-0.5">130 2nd Ave, China Grove, NC 28023</p>
+                                </div>
+                                <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+                                    <i class="fa-solid fa-music text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Local Commitment Section -->
+    <section id="about" class="py-20 bg-stone-900/50 border-y border-stone-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400">About The Artist</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Tailored Live Music Right Here in China Grove</h2>
+                <p class="text-stone-300 text-base sm:text-lg leading-relaxed">
+                    Based right on 2nd Ave in China Grove, I dedicate my performances exclusively to our local <strong class="text-white">NC 28023</strong> community. Focusing strictly on local events ensures punctual arrival, zero travel surcharges, and personalized attention to the exact mood you want to set.
+                </p>
+            </div>
+
+            <!-- 3 Feature Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Exclusively NC 28023</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        I perform solely within China Grove, NC 28023. Supporting local neighbors, families, and businesses with reliable, hometown professionalism.
+                    </p>
+                </div>
+
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 text-xl">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Self-Contained Sound</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        I bring my own acoustic & electric guitars, clean amplification, and microphones—ready for indoor dining rooms or outdoor backyard patios.
+                    </p>
+                </div>
+
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 text-xl">
+                        <i class="fa-solid fa-compact-disc"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Versatile Setlists</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        From warm fingerstyle acoustic instrumentals and classic country to timeless rock, blues, and modern hits customized to your crowd.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Occasions Performed Section -->
+    <section id="occasions" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Events & Venues</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Occasions I Perform At</h2>
+                </div>
+                <p class="text-stone-400 text-sm max-w-md">
+                    Every performance in China Grove (28023) is adapted in volume and style to complement your guests.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-rings-wedding text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Weddings & Rehearsals</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            Romantic acoustic ceremony music, cocktail hour ambiance, and rehearsal dinner performances.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-medium">
+                        Custom song requests available
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-champagne-glasses text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Private Backyard Parties</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            Birthdays, anniversaries, graduations, and neighborhood cookouts right in your backyard.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-medium">
+                        Upbeat & crowd-pleasing sets
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-utensils text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Restaurants & Cafés</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            Dinner-friendly acoustic sets that keep patrons lingering longer without overpowering conversation.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-medium">
+                        Single or recurring bookings
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Corporate & Community</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            Local business mixers, charity fundraisers, holiday gatherings, and community celebrations.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-medium">
+                        Polished & dependable setup
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparent Pricing & Interactive Estimator Section -->
+    <section id="pricing" class="py-20 bg-stone-900/50 border-y border-stone-800/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Simple & Transparent Rates</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Performance Pricing</h2>
+                <p class="text-stone-400 mt-2 text-sm sm:text-base">Clear hourly pricing with no hidden local travel fees inside China Grove, NC 28023.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                <!-- Base Rate Card -->
+                <div class="md:col-span-6 p-8 rounded-3xl bg-gradient-to-b from-stone-900 to-stone-950 border border-amber-500/40 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-semibold mb-4">
+                            Standard Live Performance
+                        </div>
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <span class="text-5xl font-bold text-white">$200</span>
+                            <span class="text-stone-400 font-medium">/ hour (starting)</span>
+                        </div>
+                        <p class="text-stone-300 text-sm mb-6 leading-relaxed">
+                            Ideal for private parties, intimate dinners, ceremonies, and local China Grove venues.
+                        </p>
+
+                        <ul class="space-y-3 text-sm text-stone-300 mb-8">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>Live solo acoustic or electric guitar performance</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>Professional compact PA system & setup included</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>$0 travel fee within ZIP code <strong>28023</strong></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>Curated background music during short breaks</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#booking" class="w-full py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-center text-sm transition-colors">
+                        Reserve Your Date
+                    </a>
+                </div>
+
+                <!-- Interactive Cost Estimator -->
+                <div class="md:col-span-6 p-8 rounded-3xl bg-stone-900 border border-stone-800 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Quick Event Estimator</h3>
+                        <p class="text-stone-400 text-sm mb-6">Slide to estimate your base performance investment in NC 28023.</p>
+
+                        <!-- Duration Slider -->
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <label for="hours-slider" class="text-sm font-medium text-stone-300">Performance Duration</label>
+                                <span id="hours-display" class="px-3 py-1 rounded-lg bg-stone-800 text-amber-400 font-bold text-sm">2 Hours</span>
+                            </div>
+                            <input 
+                                id="hours-slider" 
+                                type="range" 
+                                min="1" 
+                                max="6" 
+                                value="2" 
+                                class="w-full h-2 bg-stone-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                            >
+                            <div class="flex justify-between text-xs text-stone-500 mt-1.5">
+                                <span>1 hr</span>
+                                <span>2 hrs</span>
+                                <span>3 hrs</span>
+                                <span>4 hrs</span>
+                                <span>5 hrs</span>
+                                <span>6 hrs</span>
+                            </div>
+                        </div>
+
+                        <!-- Custom Song Request Toggle -->
+                        <div class="p-4 rounded-2xl bg-stone-950/70 border border-stone-800 mb-6">
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div>
+                                    <span class="text-sm font-medium text-white block">Special Song Arrangement</span>
+                                    <span class="text-xs text-stone-400">Learn up to 2 custom songs (+$50 flat)</span>
+                                </div>
+                                <input id="custom-song-toggle" type="checkbox" class="w-5 h-5 rounded accent-amber-500 cursor-pointer">
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Estimated Total Box -->
+                    <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-amber-400 font-semibold block">Estimated Starting Total</span>
+                            <span class="text-xs text-stone-400">Valid for China Grove, NC 28023</span>
+                        </div>
+                        <div class="text-right">
+                            <span id="total-estimate" class="text-3xl font-bold text-white">$400</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Contact Section -->
+    <section id="booking" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Contact & Service Area Details -->
+                <div id="contact" class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Direct Contact</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Book Walker Harrison</h2>
+                        <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+                            Ready to bring live guitar to your gathering? Call directly or send an inquiry below. Please note that I exclusively accept bookings located within <strong class="text-white">China Grove, NC 28023</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Contact Cards -->
+                    <div class="space-y-4">
+                        <!-- Phone -->
+                        <div class="p-5 rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-stone-400">Direct Phone / Text</p>
+                                    <a href="tel:+19109753185" class="text-base sm:text-lg font-bold text-white hover:text-amber-400 transition-colors">
+                                        +1 910-975-3185
+                                    </a>
+                                </div>
+                            </div>
+                            <button onclick="copyPhoneNumber()" class="p-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-xs font-medium transition-colors" title="Copy Phone Number">
+                                <i class="fa-regular fa-copy"></i> Copy
+                            </button>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="p-5 rounded-2xl bg-stone-900 border border-stone-800 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-map-pin text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-stone-400">Home Studio & Service Hub</p>
+                                <p class="text-base font-bold text-white mt-0.5">Walker Harrison</p>
+                                <p class="text-sm text-stone-300">130 2nd Ave</p>
+                                <p class="text-sm text-stone-300">China Grove, NC 28023</p>
+                                <p class="text-xs text-amber-400 font-semibold mt-1 uppercase tracking-wider">United States</p>
+                            </div>
+                        </div>
+
+                        <!-- Strict Service Area Notice -->
+                        <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-3.5">
+                            <i class="fa-solid fa-circle-info text-amber-400 mt-1"></i>
+                            <div class="text-xs sm:text-sm text-stone-200 leading-relaxed">
+                                <strong class="text-amber-300">Service Area Policy:</strong> Performances are strictly limited to venues and residences within <strong class="text-white">NC 28023 (China Grove)</strong>. Rates start at <strong class="text-white">$200/hr</strong>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Booking Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="p-6 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800 shadow-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-2">Request Availability</h3>
+                        <p class="text-stone-400 text-sm mb-6">Fill out your event details in China Grove (28023) and I will get back to you promptly.</p>
+
+                        <form id="booking-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Your Name *</label>
+                                    <input type="text" id="client-name" required placeholder="e.g., Sarah Jenkins" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="client-phone" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Phone Number *</label>
+                                    <input type="tel" id="client-phone" required placeholder="(704) 555-0192" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="event-date" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Event Date *</label>
+                                    <input type="date" id="event-date" required class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="event-zip" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Event ZIP Code *</label>
+                                    <input type="text" id="event-zip" value="28023" required maxlength="5" placeholder="28023" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                    <p id="zip-warning" class="hidden text-xs text-rose-400 mt-1.5">
+                                        <i class="fa-solid fa-triangle-exclamation mr-1"></i> I currently perform in NC 28023 only.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="occasion-type" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Occasion Type</label>
+                                    <select id="occasion-type" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                        <option value="Private Party / Backyard Gathering">Private Party / Backyard Gathering</option>
+                                        <option value="Wedding Ceremony / Cocktail Hour">Wedding Ceremony / Cocktail Hour</option>
+                                        <option value="Restaurant / Café Live Set">Restaurant / Café Live Set</option>
+                                        <option value="Corporate / Community Event">Corporate / Community Event</option>
+                                        <option value="Other Local Occasion">Other Local Occasion</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="duration-select" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Estimated Hours ($200/hr)</label>
+                                    <select id="duration-select" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                        <option value="1">1 Hour ($200 starting)</option>
+                                        <option value="2" selected>2 Hours ($400 starting)</option>
+                                        <option value="3">3 Hours ($600 starting)</option>
+                                        <option value="4">4 Hours ($800 starting)</option>
+                                        <option value="5+">5+ Hours (Custom Quote)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="event-notes" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Venue Address in China Grove & Notes</label>
+                                <textarea id="event-notes" rows="3" placeholder="Tell me about your venue in China Grove, preferred music vibe, or indoor/outdoor setup..." class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Booking Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- DEDICATED ABOUT PAGE VIEW -->
+    <section id="page-about" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </button>
+                <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Biography & Musical Story</span>
+                <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2 mb-6">About Walker Harrison</h1>
+                <p class="text-lg text-stone-300 leading-relaxed">
+                    Rooted right here in <strong class="text-white">China Grove, NC 28023</strong>, I am a dedicated solo acoustic and electric guitarist bringing warm, memorable live music to local celebrations, private gatherings, and hometown venues.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
+                <div class="lg:col-span-5">
+                    <div class="rounded-3xl overflow-hidden border border-stone-800 bg-stone-900 shadow-xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=800&q=80" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/700x800/1c1917/f59e0b?text=Walker+Harrison+Guitar';"
+                            alt="Walker Harrison Playing Guitar" 
+                            class="w-full h-96 object-cover"
+                        >
+                        <div class="p-6">
+                            <h2 class="text-lg font-bold text-white">Local Hometown Musician</h2>
+                            <p class="text-sm text-stone-400 mt-1">130 2nd Ave, China Grove, NC 28023</p>
+                            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between text-xs">
+                                <span class="text-stone-400">Starting Rate</span>
+                                <span class="text-amber-400 font-bold text-sm">$200 / hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-stone-300 leading-relaxed">
+                    <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 space-y-4">
+                        <h3 class="text-xl font-bold text-white">Why I Perform Exclusively in NC 28023</h3>
+                        <p class="text-sm sm:text-base">
+                            Great live music isn't just about hitting the right notes—it's about showing up prepared, reading the room, and connecting with neighbors. By dedicating my performance schedule strictly to <strong class="text-white">China Grove (ZIP 28023)</strong>, I guarantee punctual setup, zero long-distance travel fatigue or extra mileage fees, and complete focus on making your occasion special.
+                        </p>
+                        <p class="text-sm sm:text-base">
+                            Whether you need delicate fingerstyle instrumentals while guests mingle at a rehearsal dinner or soulful acoustic-electric covers for a backyard celebration, every setlist is crafted around your event's atmosphere.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-6 rounded-2xl bg-stone-900/70 border border-stone-800">
+                            <i class="fa-solid fa-guitar text-amber-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Genres & Style</h4>
+                            <p class="text-xs text-stone-400 leading-relaxed">Classic Country, Southern Rock, Fingerstyle Acoustic, Blues, Americana, and timeless Singer-Songwriter favorites.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-stone-900/70 border border-stone-800">
+                            <i class="fa-solid fa-volume-high text-amber-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Pro Equipment</h4>
+                            <p class="text-xs text-stone-400 leading-relaxed">Self-contained, battery- or AC-powered clean PA amplification suitable for living rooms, patios, and local venues.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="navigateTo('contact')" class="px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition-all shadow-lg">
+                            Inquire About Your China Grove Event
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED CONTACT PAGE VIEW -->
+    <section id="page-contact" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Get In Touch</span>
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">Contact Walker Harrison</h1>
+            <p class="text-stone-300 text-base sm:text-lg max-w-2xl mb-12">
+                Have questions about song requests, equipment setup, or availability in <strong class="text-white">China Grove, NC 28023</strong>? Reach out directly by phone or send a quick message below.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Address Card -->
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Studio Address</h3>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        Walker Harrison<br>
+                        130 2nd Ave<br>
+                        China Grove, NC 28023<br>
+                        UNITED STATES
+                    </p>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Phone & Text</h3>
+                        <a href="tel:+19109753185" class="text-lg font-bold text-amber-400 hover:underline block mb-1">
+                            +1 910-975-3185
+                        </a>
+                        <p class="text-xs text-stone-400">Available daily 9:00 AM – 8:00 PM EST</p>
+                    </div>
+                    <button onclick="copyPhoneNumber()" class="mt-4 w-full py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-xs font-semibold text-white transition-colors">
+                        <i class="fa-regular fa-copy mr-1"></i> Copy Phone Number
+                    </button>
+                </div>
+
+                <!-- Rates & Area Card -->
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Rates & Service Zone</h3>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        <strong class="text-white">Starting Rate:</strong> $200 / hour<br>
+                        <strong class="text-white">Service Area:</strong> NC 28023 Only<br>
+                        <span class="text-xs text-stone-400 block mt-2">No travel fees within China Grove city limits.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Direct Contact Message Form -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800">
+                <h2 class="text-2xl font-bold text-white mb-2">Send a Direct Message</h2>
+                <p class="text-sm text-stone-400 mb-6">For events in NC 28023 starting at $200/hr.</p>
+                <form id="contact-page-form" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Full Name *</label>
+                            <input type="text" required placeholder="Your Name" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Phone or Email *</label>
+                            <input type="text" required placeholder="+1 (910) 000-0000" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Event ZIP Code (28023 Only) *</label>
+                            <input type="text" id="contact-zip" value="28023" maxlength="5" required class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Preferred Date</label>
+                            <input type="date" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Message / Occasion Details *</label>
+                        <textarea rows="4" required placeholder="Share your China Grove venue details, occasion, and desired hours..." class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+                    <button type="submit" class="px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition-all shadow-lg">
+                        Send Message to Walker
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED PRIVACY POLICY PAGE VIEW -->
+    <section id="page-privacy" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Legal Information</span>
+            <h1 class="font-serif text-4xl font-bold text-white mt-2 mb-2">Privacy Policy</h1>
+            <p class="text-xs text-stone-400 mb-8">Last Updated: November 2026 • Walker Harrison Music (China Grove, NC 28023)</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800 space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Information We Collect</h2>
+                    <p>
+                        When you submit a booking inquiry or contact request through this website, Walker Harrison collects only the personal details you voluntarily provide, including your name, phone number, email address, event date, event venue address, and ZIP code (to verify service eligibility within <strong class="text-white">China Grove, NC 28023</strong>).
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. How We Use Your Information</h2>
+                    <p>Your information is used strictly for:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-stone-300">
+                        <li>Confirming whether your event venue is located within our NC 28023 service area.</li>
+                        <li>Communicating availability, custom song requests, and hourly rate quotes (starting at $200/hr).</li>
+                        <li>Coordinating live sound setup and arrival logistics for your scheduled performance.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Data Sharing & Security</h2>
+                    <p>
+                        We respect your privacy. Walker Harrison never sells, rents, or trades your contact details to third-party marketers or external agencies. Your details remain confidential and are retained only as needed to fulfill your booking and maintain basic business records.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Contact Regarding Privacy</h2>
+                    <p>
+                        If you wish to update or delete your inquiry details, please contact Walker Harrison directly:<br>
+                        <strong class="text-white">Address:</strong> 130 2nd Ave, China Grove, NC 28023, UNITED STATES<br>
+                        <strong class="text-white">Phone:</strong> <a href="tel:+19109753185" class="text-amber-400 hover:underline">+1 910-975-3185</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED TERMS OF SERVICE PAGE VIEW -->
+    <section id="page-terms" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Booking Guidelines</span>
+            <h1 class="font-serif text-4xl font-bold text-white mt-2 mb-2">Terms of Service</h1>
+            <p class="text-xs text-stone-400 mb-8">Effective Date: November 2026 • Walker Harrison Live Guitar Performances</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800 space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Geographic Service Limitation (NC 28023 Only)</h2>
+                    <p>
+                        All live guitar bookings are strictly limited to venues, residences, and event spaces physically located within <strong class="text-white">China Grove, NC 28023</strong>. Inquiries for locations outside ZIP code 28023 cannot be accommodated at this time.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. Performance Rates & Minimums</h2>
+                    <p>
+                        Live solo guitar performance rates <strong class="text-white">start at $200 per hour</strong> (1-hour minimum booking). Final pricing may vary based on total performance duration, special song arrangement requests, or custom equipment needs confirmed prior to booking.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Venue Requirements & Weather Policy</h2>
+                    <p>
+                        The client agrees to provide a safe, level performance area (minimum 6ft x 6ft) with access to a standard grounded 120V electrical outlet within 50 feet. For outdoor events in China Grove, covered shelter must be available in the event of rain or extreme heat to protect musical instruments and amplification gear.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Cancellations & Rescheduling</h2>
+                    <p>
+                        Please notify Walker Harrison at <a href="tel:+19109753185" class="text-amber-400 hover:underline">+1 910-975-3185</a> at least 7 days prior to your scheduled event date for penalty-free rescheduling within NC 28023, subject to calendar availability.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">5. Business Information</h2>
+                    <p>
+                        <strong class="text-white">Walker Harrison</strong><br>
+                        130 2nd Ave, China Grove, NC 28023, UNITED STATES<br>
+                        Phone: +1 910-975-3185
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 border-t border-stone-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-stone-900">
+                <div class="text-center md:text-left">
+                    <span class="font-serif text-xl font-bold text-white block">Walker Harrison</span>
+                    <p class="text-xs text-stone-400 mt-1">
+                        130 2nd Ave, China Grove, NC 28023, UNITED STATES • <a href="tel:+19109753185" class="text-amber-400 hover:underline">+1 910-975-3185</a>
+                    </p>
+                </div>
+
+                <!-- Footer Page Links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-stone-400">
+                    <button onclick="navigateTo('home')" class="hover:text-amber-400 transition-colors">Home</button>
+                    <button onclick="navigateTo('about')" class="hover:text-amber-400 transition-colors">About</button>
+                    <button onclick="navigateTo('contact')" class="hover:text-amber-400 transition-colors">Contact</button>
+                    <button onclick="navigateTo('privacy')" class="hover:text-amber-400 transition-colors">Privacy Policy</button>
+                    <button onclick="navigateTo('terms')" class="hover:text-amber-400 transition-colors">Terms of Service</button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 text-center sm:text-left">
+                <p>Live Guitarist Performing Exclusively in NC 28023 • Starting at $200/hr</p>
+                <p>&copy; <span id="current-year"></span> Walker Harrison Music. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Notification Modal / Toast (Replaces alert) -->
+    <div id="notification-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-stone-950/80 backdrop-blur-sm">
+        <div class="max-w-md w-full p-6 sm:p-8 rounded-3xl bg-stone-900 border border-stone-700 shadow-2xl text-center transform transition-all">
+            <div id="modal-icon-container" class="w-14 h-14 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i id="modal-icon" class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-xl font-bold text-white mb-2">Inquiry Received!</h3>
+            <p id="modal-message" class="text-sm text-stone-300 leading-relaxed mb-6">
+                Thank you for reaching out! Walker Harrison will review your China Grove event details and call you shortly.
+            </p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition-colors">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Single-Page Multi-View Navigation Router (Home, About, Contact, Privacy, Terms)
+        function navigateTo(pageName) {
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(view => view.classList.add('hidden'));
+
+            const targetView = document.getElementById(`page-${pageName}`);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+            }
+
+            // Update active state on desktop nav buttons
+            document.querySelectorAll('.nav-link').forEach(btn => {
+                if (btn.dataset.page === pageName) {
+                    btn.classList.remove('text-stone-300');
+                    btn.classList.add('text-amber-400');
+                } else {
+                    btn.classList.remove('text-amber-400');
+                    btn.classList.add('text-stone-300');
+                }
+            });
+
+            // Close mobile menu if open
+            const mobileMenuEl = document.getElementById('mobile-menu');
+            if (mobileMenuEl && !mobileMenuEl.classList.contains('hidden')) {
+                mobileMenuEl.classList.add('hidden');
+            }
+
+            // Smooth scroll to top when switching views
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Rate Calculator ($200/hr base)
+        const hoursSlider = document.getElementById('hours-slider');
+        const hoursDisplay = document.getElementById('hours-display');
+        const customSongToggle = document.getElementById('custom-song-toggle');
+        const totalEstimate = document.getElementById('total-estimate');
+        const durationSelect = document.getElementById('duration-select');
+
+        function updateEstimate() {
+            const hours = parseInt(hoursSlider.value, 10);
+            const hourlyRate = 200;
+            const customSongFee = customSongToggle.checked ? 50 : 0;
+            const total = (hours * hourlyRate) + customSongFee;
+
+            hoursDisplay.textContent = hours === 1 ? '1 Hour' : `${hours} Hours`;
+            totalEstimate.textContent = `$${total.toLocaleString()}`;
+
+            // Sync with booking dropdown if 1-4 hours
+            if (hours <= 4) {
+                durationSelect.value = hours.toString();
+            } else {
+                durationSelect.value = '5+';
+            }
+        }
+
+        hoursSlider.addEventListener('input', updateEstimate);
+        customSongToggle.addEventListener('change', updateEstimate);
+
+        // Live ZIP Code Validation (NC 28023 Only)
+        const zipInput = document.getElementById('event-zip');
+        const zipWarning = document.getElementById('zip-warning');
+
+        zipInput.addEventListener('input', () => {
+            const val = zipInput.value.trim();
+            if (val.length === 5 && val !== '28023') {
+                zipWarning.classList.remove('hidden');
+                zipInput.classList.add('border-rose-500');
+            } else {
+                zipWarning.classList.add('hidden');
+                zipInput.classList.remove('border-rose-500');
+            }
+        });
+
+        // Copy Phone Number using fallback execCommand for iframe compatibility
+        function copyPhoneNumber() {
+            const phoneText = '+1 910-975-3185';
+            const tempInput = document.createElement('textarea');
+            tempInput.value = phoneText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showModal(
+                    'Phone Number Copied',
+                    'Walker Harrison\'s number (+1 910-975-3185) has been copied to your clipboard.',
+                    'fa-copy',
+                    false
+                );
+            } catch (err) {
+                showModal(
+                    'Direct Phone Number',
+                    'Call or text Walker Harrison directly at +1 910-975-3185.',
+                    'fa-phone',
+                    false
+                );
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Custom Modal Helpers
+        const modal = document.getElementById('notification-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalIcon = document.getElementById('modal-icon');
+        const modalIconContainer = document.getElementById('modal-icon-container');
+
+        function showModal(title, message, iconClass = 'fa-check', isWarning = false) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modalIcon.className = `fa-solid ${iconClass}`;
+            
+            if (isWarning) {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            } else {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Booking Form Submission Handler
+        const bookingForm = document.getElementById('booking-form');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('client-name').value.trim();
+            const zip = document.getElementById('event-zip').value.trim();
+            const occasion = document.getElementById('occasion-type').value;
+
+            // Enforce NC 28023 Service Area Rule
+            if (zip !== '28023') {
+                showModal(
+                    'Outside Service Area (NC 28023 Only)',
+                    `Hi ${name}, Walker Harrison exclusively performs at events located within China Grove, NC 28023. Please update the ZIP code to 28023 if your venue is within China Grove.`,
+                    'fa-location-crosshairs',
+                    true
+                );
+                return;
+            }
+
+            showModal(
+                'Booking Request Sent!',
+                `Thank you, ${name}! Your inquiry for a ${occasion} in China Grove (28023) is ready. Walker Harrison will follow up shortly—or call +1 910-975-3185 for immediate confirmation.`,
+                'fa-guitar',
+                false
+            );
+            
+            bookingForm.reset();
+            document.getElementById('event-zip').value = '28023';
+        });
+
+        // Contact Page Form Submission Handler (Enforces NC 28023)
+        const contactPageForm = document.getElementById('contact-page-form');
+        if (contactPageForm) {
+            contactPageForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const zipVal = document.getElementById('contact-zip').value.trim();
+                if (zipVal !== '28023') {
+                    showModal(
+                        'Outside Service Area (NC 28023 Only)',
+                        'Walker Harrison exclusively performs at events located within China Grove, NC 28023. Please verify your event ZIP code is 28023.',
+                        'fa-location-crosshairs',
+                        true
+                    );
+                    return;
+                }
+                showModal(
+                    'Message Sent to Walker!',
+                    'Thank you for contacting Walker Harrison. Expect a reply soon—or call +1 910-975-3185 directly.',
+                    'fa-envelope-circle-check',
+                    false
+                );
+                contactPageForm.reset();
+                document.getElementById('contact-zip').value = '28023';
+            });
+        }
+    </script>
+</body>
+</html>
